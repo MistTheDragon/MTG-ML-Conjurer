@@ -2,8 +2,8 @@ import ijson
 import json
 from decimal import Decimal
 
-INPUT_FILE = "MTG-ML-Conjurer\src\scry\oracle-cards.json"
-OUTPUT_FILE = "MTG-ML-Conjurer\src\scry\oracle-cards-trim.json"
+INPUT_FILE = "MTG-ML-Conjurer\src\scryfall\oracle-cards.json"
+OUTPUT_FILE = "MTG-ML-Conjurer\src\scryfall\oracle-cards-trim.json"
 
 FIELDS = [
     "id",
