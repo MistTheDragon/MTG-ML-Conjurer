@@ -21,7 +21,7 @@ FIELDS = [
 
 count = 0
 
-with open(INPUT_FILE, "rb") as infile, open(OUTPUT_FILE, "w", encoding="utf8") as outfile:
+with open(INPUT_FILE, "rb") as infile, open(OUTPUT_FILE, "w", encoding="utf-8") as outfile:
     parser = ijson.items(infile, "item")
 
     outfile.write("[\n")

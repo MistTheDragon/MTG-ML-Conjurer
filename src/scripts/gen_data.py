@@ -27,18 +27,19 @@ df = df.fillna("")
 # Build input text
 df["input"] = (
     "POWER=" + df["power"].astype(str) + " " +
-    "TOUGHNESS=" + df["toughness"].astype(str) + " " +
-    "TYPE=" + df["type_line"] + " " +
-    "TEXT=" + df["oracle_text"]
+    "TOUGHNESS=" + df["toughness"].astype(str)
 )
 
 # Build output text
 df["output"] = (
-    "MANA=" + df["mana_cost"] + " " +
-    "KEYWORDS=" + df["keywords"].apply(lambda x: " ".join(x) if isinstance(x, list) else "")
+    "MANA=" + df["mana_cost"]
 )
 
 # Keep only what we need
 training = df[["input", "output"]]
-training.to_csv("creature_train.csv", index=False, encoding="utf-8")
+training.to_csv("PT_train.csv", index=False, encoding="utf-8")
+#training.to_csv("creature_train.csv", index=False, encoding="utf-8")
 
+
+# Save Graveyard
+#"KEYWORDS=" + df["keywords"].apply(lambda x: " ".join(x) if isinstance(x, list) else "") (line 36)
